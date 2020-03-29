@@ -1,14 +1,14 @@
 version: 1.0.{build}
 image: Visual Studio 2019
-clone_folder: c:\projects
+clone_folder: c:\projects-jde83s5y6e3id5l8
 install:
-  - cd c:\projects-ukubxtnt3mk404ia
+  - cd c:\projects-jde83s5y6e3id5l8
   - git submodule update --init --recursive --remote
 build_script:
 - cmd: >-
-    nuget restore c:\projects-ukubxtnt3mk404ia\build\build.sln
+    nuget restore c:\projects-jde83s5y6e3id5l8\build\build.sln
 
-    msbuild c:\projects-ukubxtnt3mk404ia\build\build.sln /p:Configuration="Release" /verbosity:quiet
+    msbuild c:\projects-jde83s5y6e3id5l8\build\build.sln /p:Configuration="Release" /verbosity:quiet
 
 before_deploy:
 - ps: >-
